@@ -8,8 +8,10 @@
 import UIKit
 import FirebaseUI
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, Storyboarded {
 
+    weak var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,7 +23,6 @@ extension AuthViewController {
     
     @IBAction func login(_ sender: Any) {
         let authUI = FUIAuth.defaultAuthUI()
-        // You need to adopt a FUIAuthDelegate protocol to receive callback
         
         guard authUI != nil else {
             return
@@ -31,9 +32,7 @@ extension AuthViewController {
         authUI?.providers = [FUIEmailAuth()]
         
         let authVC = authUI!.authViewController()
-        present(authVC, animated: true) {
-            print("good")
-        }
+        present(authVC, animated: true)
     }
 }
 
@@ -45,7 +44,7 @@ extension AuthViewController: FUIAuthDelegate {
         if let error = error {
             self.createAlert(title: "Auhtantification error", message: error.localizedDescription)
         } else {
-            self.performSegue(withIdentifier: "loginSuccedded", sender: nil)
+            coordinator?.authDidFinish()
         }
     }
 }

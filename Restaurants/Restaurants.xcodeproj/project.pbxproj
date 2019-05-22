@@ -9,18 +9,22 @@
 /* Begin PBXBuildFile section */
 		56BBA715C86BD44A673A4B2D /* Pods_Restaurants.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C855F3BAAE54498E92F652 /* Pods_Restaurants.framework */; };
 		76A6C0EE2291AD8E00390C6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76A6C0ED2291AD8E00390C6C /* GoogleService-Info.plist */; };
-		76A6C0F52291F88400390C6C /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6C0F42291F88400390C6C /* UIViewControllerExtension.swift */; };
+		76A6C0F52291F88400390C6C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A6C0F42291F88400390C6C /* UIViewController.swift */; };
 		76EC1B452291AB350065CFF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC1B442291AB350065CFF7 /* AppDelegate.swift */; };
 		76EC1B472291AB350065CFF7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EC1B462291AB350065CFF7 /* AuthViewController.swift */; };
 		76EC1B4A2291AB350065CFF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC1B482291AB350065CFF7 /* Main.storyboard */; };
 		76EC1B4C2291AB370065CFF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC1B4B2291AB370065CFF7 /* Assets.xcassets */; };
 		76EC1B4F2291AB370065CFF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC1B4D2291AB370065CFF7 /* LaunchScreen.storyboard */; };
+		F9D9C96F2295A4E800CBE5AF /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D9C96E2295A4E800CBE5AF /* FirebaseAuth.swift */; };
+		F9D9C9722295A88B00CBE5AF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D9C9712295A88B00CBE5AF /* Coordinator.swift */; };
+		F9D9C9742295A8DF00CBE5AF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D9C9732295A8DF00CBE5AF /* MainCoordinator.swift */; };
+		F9D9C9762295AA7B00CBE5AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D9C9752295AA7B00CBE5AF /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D6E27BEB8D01CADE2EB14CC /* Pods-Restaurants.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurants.debug.xcconfig"; path = "Target Support Files/Pods-Restaurants/Pods-Restaurants.debug.xcconfig"; sourceTree = "<group>"; };
 		76A6C0ED2291AD8E00390C6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		76A6C0F42291F88400390C6C /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		76A6C0F42291F88400390C6C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		76EC1B412291AB350065CFF7 /* Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76EC1B442291AB350065CFF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76EC1B462291AB350065CFF7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +34,10 @@
 		76EC1B502291AB370065CFF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C855F3BAAE54498E92F652 /* Pods_Restaurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5A0EF210328F959A212752 /* Pods-Restaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurants.release.xcconfig"; path = "Target Support Files/Pods-Restaurants/Pods-Restaurants.release.xcconfig"; sourceTree = "<group>"; };
+		F9D9C96E2295A4E800CBE5AF /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		F9D9C9712295A88B00CBE5AF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F9D9C9732295A8DF00CBE5AF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		F9D9C9752295AA7B00CBE5AF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				76EC1B462291AB350065CFF7 /* AuthViewController.swift */,
+				F9D9C9752295AA7B00CBE5AF /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,7 +100,8 @@
 		76A6C0F32291F86D00390C6C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				76A6C0F42291F88400390C6C /* UIViewControllerExtension.swift */,
+				76A6C0F42291F88400390C6C /* UIViewController.swift */,
+				F9D9C96E2295A4E800CBE5AF /* FirebaseAuth.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,6 +131,7 @@
 				76A6C0F02291AFAE00390C6C /* Controllers */,
 				76A6C0EF2291AFA400390C6C /* Application */,
 				76A6C0F22291B00700390C6C /* Helpers */,
+				F9D9C9702295A80800CBE5AF /* Coordinator */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";
@@ -132,6 +143,15 @@
 				EF5A0EF210328F959A212752 /* Pods-Restaurants.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9D9C9702295A80800CBE5AF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F9D9C9712295A88B00CBE5AF /* Coordinator.swift */,
+				F9D9C9732295A8DF00CBE5AF /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,9 +341,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D9C9762295AA7B00CBE5AF /* MainViewController.swift in Sources */,
+				F9D9C96F2295A4E800CBE5AF /* FirebaseAuth.swift in Sources */,
+				F9D9C9742295A8DF00CBE5AF /* MainCoordinator.swift in Sources */,
 				76EC1B472291AB350065CFF7 /* AuthViewController.swift in Sources */,
+				F9D9C9722295A88B00CBE5AF /* Coordinator.swift in Sources */,
 				76EC1B452291AB350065CFF7 /* AppDelegate.swift in Sources */,
-				76A6C0F52291F88400390C6C /* UIViewControllerExtension.swift in Sources */,
+				76A6C0F52291F88400390C6C /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
