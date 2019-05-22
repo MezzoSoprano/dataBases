@@ -1,5 +1,5 @@
 //
-//  UIViewControllerExtension.swift
+//  UIViewController.swift
 //  Restaurants
 //
 //  Created by Святослав Катола on 5/19/19.

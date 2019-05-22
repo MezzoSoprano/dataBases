@@ -14,6 +14,7 @@ class AuthViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 }
 
@@ -35,6 +36,22 @@ extension AuthViewController {
         present(authVC, animated: true)
     }
 }
+
+
+// Table View
+
+//extension AuthViewController: UITabBarDelegate, UITableViewDataSource {
+//    
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 0
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return UITableViewCell()
+//    }
+//    
+//    
+//}
 
 // MARK: - Auth UI Delegate
 

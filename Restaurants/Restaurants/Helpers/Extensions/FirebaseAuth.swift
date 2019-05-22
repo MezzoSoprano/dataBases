@@ -7,7 +7,7 @@
 
 import FirebaseAuth
 
-enum CurrentUserStare {
+enum CurrentUserState {
     case admin
     case user
     case unAuhtorized
@@ -18,7 +18,7 @@ let adminsID = ["qHkkCxeUcUcPzabbGJEIDY92AqI2"]
 
 extension Auth {
     
-    static func currentUserState() -> CurrentUserStare {
+    static func currentUserState() -> CurrentUserState {
         
         guard let userID = Auth.auth().currentUser?.uid else { return .unAuhtorized }
     

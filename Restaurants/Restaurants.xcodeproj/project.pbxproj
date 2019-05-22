@@ -15,6 +15,8 @@
 		76EC1B4A2291AB350065CFF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC1B482291AB350065CFF7 /* Main.storyboard */; };
 		76EC1B4C2291AB370065CFF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76EC1B4B2291AB370065CFF7 /* Assets.xcassets */; };
 		76EC1B4F2291AB370065CFF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76EC1B4D2291AB370065CFF7 /* LaunchScreen.storyboard */; };
+		76FCDAE92295EAF50046D7EE /* CreateOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FCDAE82295EAF50046D7EE /* CreateOrderViewController.swift */; };
+		76FCDAEC2295F17F0046D7EE /* OrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FCDAEB2295F17F0046D7EE /* OrderListViewModel.swift */; };
 		F9D9C96F2295A4E800CBE5AF /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D9C96E2295A4E800CBE5AF /* FirebaseAuth.swift */; };
 		F9D9C9722295A88B00CBE5AF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D9C9712295A88B00CBE5AF /* Coordinator.swift */; };
 		F9D9C9742295A8DF00CBE5AF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D9C9732295A8DF00CBE5AF /* MainCoordinator.swift */; };
@@ -32,6 +34,8 @@
 		76EC1B4B2291AB370065CFF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76EC1B4E2291AB370065CFF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76EC1B502291AB370065CFF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76FCDAE82295EAF50046D7EE /* CreateOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderViewController.swift; sourceTree = "<group>"; };
+		76FCDAEB2295F17F0046D7EE /* OrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewModel.swift; sourceTree = "<group>"; };
 		E8C855F3BAAE54498E92F652 /* Pods_Restaurants.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Restaurants.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5A0EF210328F959A212752 /* Pods-Restaurants.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurants.release.xcconfig"; path = "Target Support Files/Pods-Restaurants/Pods-Restaurants.release.xcconfig"; sourceTree = "<group>"; };
 		F9D9C96E2295A4E800CBE5AF /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
@@ -71,8 +75,10 @@
 		76A6C0F02291AFAE00390C6C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				76FCDAEA2295F1610046D7EE /* View Models */,
 				76EC1B462291AB350065CFF7 /* AuthViewController.swift */,
 				F9D9C9752295AA7B00CBE5AF /* MainViewController.swift */,
+				76FCDAE82295EAF50046D7EE /* CreateOrderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +140,14 @@
 				F9D9C9702295A80800CBE5AF /* Coordinator */,
 			);
 			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		76FCDAEA2295F1610046D7EE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				76FCDAEB2295F17F0046D7EE /* OrderListViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		B6BFC292E571F6EEE42D6541 /* Pods */ = {
@@ -342,7 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D9C9762295AA7B00CBE5AF /* MainViewController.swift in Sources */,
+				76FCDAE92295EAF50046D7EE /* CreateOrderViewController.swift in Sources */,
 				F9D9C96F2295A4E800CBE5AF /* FirebaseAuth.swift in Sources */,
+				76FCDAEC2295F17F0046D7EE /* OrderListViewModel.swift in Sources */,
 				F9D9C9742295A8DF00CBE5AF /* MainCoordinator.swift in Sources */,
 				76EC1B472291AB350065CFF7 /* AuthViewController.swift in Sources */,
 				F9D9C9722295A88B00CBE5AF /* Coordinator.swift in Sources */,

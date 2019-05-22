@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainCoordinator: Coordinator {
     
@@ -19,13 +20,20 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = AuthViewController.instantiate()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func authDidFinish() {
         let vc = MainViewController.instantiate()
         vc.coordinator = self
+        navigationController.navigationBar.isHidden = false
         navigationController.viewControllers.removeAll()
-        navigationController.pushViewController(vc, animated: false)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func createOrder() {
+        let vc = CreateOrderViewController.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }
