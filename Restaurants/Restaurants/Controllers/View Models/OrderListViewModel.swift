@@ -7,37 +7,21 @@
 
 import FirebaseAuth
 
-//enum OrderListType {
-//
-//    case user, admin, unAuhtorized
-//
-//    init(state: CurrentUserStare) {
-//
-//        switch state {
-//        case .user:
-//            self = .user
-//        case .admin:
-//            self = .admin
-//        case .unAuhtorized:
-//            self = .unAuhtorized
-//        }
-//    }
-//}
-
 final class OrderListViewModel {
     
     typealias viewModelType = CurrentUserState
     private var type: viewModelType
+    let serice = OrderServiceImpl()
+    
+    var items = [Order]()
     
     var barTitle: String {
         switch Auth.currentUserState() {
             
         case .admin:
             return "Admin"
-            
         case .user:
             return "User"
-            
         case .unAuhtorized:
             return "Login please!"
         }
@@ -48,3 +32,53 @@ final class OrderListViewModel {
     }
 }
 
+// MARK: - API
+
+extension OrderListViewModel {
+    
+    func loadItems(handler: @escaping (Error?) -> Void ) {
+        
+        switch type {
+            
+        case .admin:
+            serice.orders { (result) in
+                
+                switch result {
+                case .success(let models):
+                    self.items = models
+                    handler(nil)
+                case .failure(let error):
+                    handler(error)
+                }
+            }
+
+        case .user:
+            serice.ordersForCurrentUser { (result) in
+                
+                switch result {
+                case .success(let models):
+                    self.items = models
+                    handler(nil)
+                case .failure(let error):
+                    handler(error)
+                }
+            }
+
+        case .unAuhtorized:
+            print("Unauthorized")
+        }
+    }
+    
+    func remove(index: Int, handler: @escaping (Error?) -> Void ) {
+        serice.cancelOrder(items[index]) { (result) in
+            switch result {
+
+            case .success(_):
+                self.items.remove(at: index)
+                handler(nil)
+            case .failure(let error):
+                handler(error)
+            }
+        }
+    }
+}

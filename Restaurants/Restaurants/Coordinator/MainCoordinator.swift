@@ -23,6 +23,13 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func signOut() {
+        let vc = AuthViewController.instantiate()
+        vc.coordinator = self
+        navigationController.viewControllers.removeAll()
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func authDidFinish() {
         let vc = MainViewController.instantiate()
         vc.coordinator = self
